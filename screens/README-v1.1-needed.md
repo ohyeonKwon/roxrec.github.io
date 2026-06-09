@@ -1,47 +1,42 @@
-# v1.1 screenshots to capture
+# Screenshots — v1.1 status
 
-The landing page (`index.html`) was updated for the v1.1 release, but app
-screenshots cannot be captured automatically. The existing v1.0 PNGs are
-reused as placeholders where they still make sense. Capture the screens below
-and drop them into this `screens/` folder, then swap the `src` in `index.html`
-at the spots marked with `<!-- v1.1 SCREENSHOT NEEDED ... -->` comments.
+**Status: the landing page now ships the real v1.1 visuals.** They were sourced
+from the App Store submission assets in the app repo at
+`roxrec/ios/appstore/out/` and copied into this folder.
 
-Use the same device frames / aspect ratios as the existing images so the
-layout and CSS stay intact (iPhone portrait for `iphone-*.png`, Apple Watch
-for `watch-*.png`).
+## Live on the landing page (`index.html`)
 
-## iPhone (replaces / adds to `iphone-*.png`)
+### iPhone — App Store screenshot filmstrip (`.shots-strip`)
+These are the polished App Store marketing frames (headline + device + brand
+baked in, 1290×2796), shown full-bleed in a horizontal filmstrip:
 
-1. **`iphone-analysis.png`** (REPLACE) — the new Expert Analytics screen:
-   pacing variability (CV), run-fade index, aerobic decoupling, training-load
-   PMC (CTL/ATL/TSB), weakest-station ranking. The current file is the old
-   v1.0 analysis screen.
-2. **`iphone-coaching.png`** (NEW) — the plain-language Coaching Summary card
-   ("what to focus on") + plan-vs-actual overlay.
-3. **`iphone-detail-roxzone.png`** (NEW, optional) — segment breakdown showing
-   runs + stations + RoxZone transitions as separate splits with transition
-   grades (elite/good/fair/slow).
+| File | Screen |
+|---|---|
+| `iphone-pace.png` | Pace Control — goal time, fatigue-adjusted paces, banked time |
+| `iphone-roxzone.png` | Competition — live RoxZone transition clock, ELITE grade |
+| `iphone-coaching.png` | Coaching Summary — 21 metrics → plain-language verdict |
+| `iphone-training.png` | Training — timers, single station, compromised run, simulation, plan |
+| `iphone-hrzones.png` | 5 lactate-threshold HR zones from a guided field test |
 
-## Apple Watch (replaces / adds to `watch-*.png`)
+### Apple Watch — raw screen captures (`.watch-frame`)
+Raw watch UI (410×502), dropped into the site's watch mockups:
 
-4. **`watch-mode-select.png`** (NEW) — start screen mode picker:
-   Competition / Pace / Train.
-5. **`watch-pace-banked.png`** (NEW) — Pace Control live banked-time glance
-   (+0:18 ahead / −0:25 behind) with the per-km pace.
-6. **`watch-roxzone.png`** (NEW) — RoxZone transition clock between segments
-   (two-tap model, "jog, don't walk" state).
-7. **`watch-hrzone.png`** (NEW) — heart rate in zone color with the 5-zone
-   gauge (Z1 gray → Z5 red).
-8. **`watch-training.png`** (NEW) — a training interval timer
-   (AMRAP / EMOM / Tabata / For Time) with round count.
-9. **`watch-station-division.png`** (NEW, optional) — station card showing the
-   division/gender weight, reps/distance and wall-ball target height.
+| File | Screen |
+|---|---|
+| `watch-modes.png` | Mode picker — Competition · Pace · Train |
+| `watch-active.png` | Live run — pace, total, HR + zone |
+| `watch-roxzone.png` | RoxZone transition clock, ELITE |
+| `watch-pace.png` | Pace banked time — +0:18 ahead of plan |
 
-## Still valid from v1.0 (no recapture needed)
+### Hero + photo card (still valid v1.0 raw captures)
+- `iphone-summary.png`, `iphone-history.png` — hero phone mockups.
+- `photocard.png` — Photo Record Card section.
 
-- `iphone-summary.png`, `iphone-history.png` — still accurate (mode tags are a
-  nice-to-have refresh, not required).
-- `photocard.png` — still accurate.
-- `watch-start.png`, `watch-run.png`, `watch-station.png`,
-  `watch-records.png`, `watch-splash.png` — reused as placeholders for the new
-  watch captions until the captures above land.
+## Optional future polish
+- The iPhone filmstrip uses **marketing mockups**, not raw simulator captures.
+  If you later want raw iPhone screens (status bar + real data) inside device
+  frames, capture them from the simulator and re-introduce the framed-grid
+  layout. Not required — the current filmstrip is the App Store-quality version.
+- Orphaned v1.0 placeholders no longer referenced: `iphone-analysis.png`,
+  `iphone-detail.png`, `watch-start.png`, `watch-run.png`, `watch-station.png`,
+  `watch-splash.png`, `watch-records.png`. Safe to delete.
